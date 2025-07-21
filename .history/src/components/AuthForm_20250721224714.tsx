@@ -100,7 +100,7 @@ function AuthForm({ type }: Props) {
     <div className="min-h-screen flex items-center justify-center p-4 bg-gradient-to-br from-blue-50 to-indigo-100">
       <div className="w-full max-w-md">
         <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100">
-          <div className={`p-6 ${isLoginForm ? "bg-green-600" : "bg-green-600"} text-white`}>
+          <div className={`p-6 ${isLoginForm ? "bg-green-600" : "bg-g-600"} text-white`}>
             <div className="flex justify-center mb-4">
               <div className="bg-white/20 p-3 rounded-full">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
