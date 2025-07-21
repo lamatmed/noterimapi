@@ -45,27 +45,27 @@ async function proxyRequest(
   });
 }
 
-export async function GET(req: NextRequest, context: { params: { path?: string[] } }) {
+export async function GET(req: NextRequest, context: { params: Promise<{ path?: string[] }> }) {
   const params = await context.params;
   return proxyRequest(req, { ...context, params }, "GET");
 }
 
-export async function POST(req: NextRequest, context: { params: { path?: string[] } }) {
+export async function POST(req: NextRequest, context: { params: Promise<{ path?: string[] }> }) {
   const params = await context.params;
   return proxyRequest(req, { ...context, params }, "POST");
 }
 
-export async function PUT(req: NextRequest, context: { params: { path?: string[] } }) {
+export async function PUT(req: NextRequest, context: { params: Promise<{ path?: string[] }> }) {
   const params = await context.params;
   return proxyRequest(req, { ...context, params }, "PUT");
 }
 
-export async function DELETE(req: NextRequest, context: { params: { path?: string[] } }) {
+export async function DELETE(req: NextRequest, context: { params: Promise<{ path?: string[] }> }) {
   const params = await context.params;
   return proxyRequest(req, { ...context, params }, "DELETE");
 }
 
-export async function PATCH(req: NextRequest, context: { params: { path?: string[] } }) {
+export async function PATCH(req: NextRequest, context: { params: Promise<{ path?: string[] }> }) {
   const params = await context.params;
   return proxyRequest(req, { ...context, params }, "PATCH");
 }

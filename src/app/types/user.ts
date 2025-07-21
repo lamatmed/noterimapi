@@ -2,5 +2,5 @@ export type User = {
   nom: string;
   email: string;
   password: string;
-  createdAt: any;
+  createdAt: number;
 };

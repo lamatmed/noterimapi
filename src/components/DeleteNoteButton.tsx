@@ -35,8 +35,9 @@ function DeleteNoteButton({ noteId, deleteNoteLocally }: Props) {
     try {
       await deleteTask(noteId);
       return { errorMessage: null };
-    } catch (e: any) {
-      return { errorMessage: e.message || "Erreur lors de la suppression" };
+    } catch (e) {
+      const error = e as Error;
+      return { errorMessage: error.message || "Erreur lors de la suppression" };
     }
   };
   const handleDeleteNote = () => {

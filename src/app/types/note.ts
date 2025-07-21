@@ -1,6 +1,6 @@
 export type Note = {
-  updatedAt: any;
-  creetdAt: any;
+  updatedAt: number;
+  creetdAt: number;
   id: string;
   name: string;
   done: boolean;

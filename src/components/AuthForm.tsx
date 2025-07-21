@@ -81,8 +81,9 @@ function AuthForm({ type }: Props) {
             return;
           }
         }
-      } catch (e: any) {
-        errorMessage = e.message || "Erreur réseau.";
+      } catch (e) {
+        const error = e as Error;
+        errorMessage = error.message || "Erreur réseau.";
       }
       if (!errorMessage) {
         router.replace(`/?toastType=${type}`);
